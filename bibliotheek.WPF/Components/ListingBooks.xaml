@@ -7,8 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Border BorderBrush="LightCyan" BorderThickness="1">
-            <ListView />
+        <Border
+            BorderBrush="{StaticResource BorderPrimary}"
+            BorderThickness="2"
+            CornerRadius="5">
+            <ListView BorderThickness="1"/>
         </Border>
     </Grid>
 </UserControl>

@@ -6,7 +6,11 @@
     StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-
+        
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="BorderPrimary" Color="Gray"/>
+        </ResourceDictionary>
+        
     </Application.Resources>
 
 </Application>
