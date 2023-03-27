@@ -27,12 +27,9 @@
                 Text="Bibliotheek boeken:" />
             
             <Button
-                Padding="10 5"
-                Margin="0 0 20 0"
                 FontSize="14"
                 Grid.Column="1"
-                Content="Add"
-                VerticalAlignment="Center" />
+                Content="Add"/>
 
         </Grid>
 

@@ -10,7 +10,8 @@
         <Border
             BorderBrush="{StaticResource BorderPrimary}"
             CornerRadius="5"
-            BorderThickness="2">
+            BorderThickness="2"
+            SnapsToDevicePixels="True">
 
             <Grid Grid.IsSharedSizeScope="True" Margin="20 10 0 0">
                 <Grid.RowDefinitions>

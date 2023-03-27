@@ -10,7 +10,8 @@
         <Border
             BorderBrush="{StaticResource BorderPrimary}"
             BorderThickness="2"
-            CornerRadius="5">
+            CornerRadius="5"
+            SnapsToDevicePixels="True">
             <ListView BorderThickness="1"/>
         </Border>
     </Grid>
