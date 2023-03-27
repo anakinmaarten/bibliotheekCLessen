@@ -1,4 +1,5 @@
-﻿using bibliotheek.WPF.ViewModels;
+﻿using bibliotheek.WPF.Stores;
+using bibliotheek.WPF.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,11 +15,19 @@ namespace bibliotheek.WPF
     /// </summary>
     public partial class App : Application
     {
+
+        private readonly SelectedBookStore _selectedBookStore;
+
+        public App()
+        {
+            _selectedBookStore = new SelectedBookStore();
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new BeheerderViewModel()
+                DataContext = new BeheerderViewModel(_selectedBookStore)
             };
             MainWindow.Show();
 

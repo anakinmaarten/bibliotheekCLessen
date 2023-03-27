@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:bibliotheek.WPF.Components"
+             xmlns:viewmodels="clr-namespace:bibliotheek.WPF.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:BookDetailsViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -27,7 +28,7 @@
 
                 <TextBlock
                     Grid.Row="0"
-                    Text="Name big username"
+                    Text="{Binding Username}"
                     FontSize="16" />
 
                 <Grid Grid.Row="1" Margin="0 20 0 0">
@@ -44,7 +45,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Margin="20 0 0 0"
-                        Text="Author full name"
+                        Text="{Binding AuthorName}"
                         FontWeight="Bold"/>
                 </Grid>
 
@@ -62,7 +63,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Margin="20 0 0 0"
-                        Text="Book title here"
+                        Text="{Binding BookTitle}"
                         FontWeight="Bold"/>
                 </Grid>
 
@@ -80,7 +81,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Margin="20 0 0 0"
-                        Text="Descriptionbook"
+                        Text="{Binding BookDesciption}"
                         FontWeight="Bold"/>
                 </Grid>
 
@@ -98,7 +99,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Margin="20 0 0 0"
-                        Text="Type of book"
+                        Text="{Binding BookType}"
                         FontWeight="Bold"/>
                 </Grid>
 
@@ -116,7 +117,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Margin="20 0 0 0"
-                        Text="book tages (Horror)"
+                        Text="{Binding BookTags}"
                         FontWeight="Bold"/>
                 </Grid>
 

@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:bibliotheek.WPF.Components" xmlns:viewmodels="clr-namespace:bibliotheek.WPF.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ListingBooksViewModel}"
+             xmlns:local="clr-namespace:bibliotheek.WPF.Components"
+             xmlns:viewmodels="clr-namespace:bibliotheek.WPF.ViewModels"
+             xmlns:custom="clr-namespace:DropdownMenuControl;assembly=DropdownMenuControl" d:DataContext="{d:DesignInstance Type=viewmodels:ListingBooksViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -21,7 +23,48 @@
                     Background="White"
                     CornerRadius="5"/>
 
-                <ListView BorderThickness="0" ItemsSource="{Binding ListingBooksItemsViewModel}"/>
+                <ListView BorderThickness="0" ItemsSource="{Binding ListingBooksItemsViewModel}">
+                    <!--Start Tripple points alignments -->
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <!--End Tripple points alignmentse -->
+                        
+                    <!--Start Listing Tamplate-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Padding="10" TextBlock.FontSize="16">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Column="0" Text="{Binding Username}"/>
+
+                                    <custom:DropdownMenu Grid.Column="1" Margin="10 0 0 0">
+                                        <Border
+                                            Background="White"
+                                            BorderBrush="Aqua"
+                                            BorderThickness="1">
+                                            
+                                        
+                                            <StackPanel>
+                                                <Button Content="Edit" Command="{Binding EditCommand}"/>
+                                                <Button Content="Delete" Command="{Binding DeleteCommand}"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </custom:DropdownMenu>
+
+
+                                </Grid>
+                            </Border>
+                        </DataTemplate> 
+                    </ListView.ItemTemplate>
+                    <!--#End Listing Tamplat-->
+                </ListView>
             </Grid>
             
         </Border>
