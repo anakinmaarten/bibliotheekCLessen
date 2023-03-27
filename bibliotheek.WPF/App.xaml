@@ -42,8 +42,8 @@
                                 <Storyboard>
                                     <ColorAnimation
                                         Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
-                                        To="Aqua"
-                                        Duration="0:0:0.5"/>
+                                        To="#383838"
+                                        Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.EnterActions>
@@ -54,7 +54,7 @@
                                     <ColorAnimation
                                         Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
                                         To="Black"
-                                        Duration="0:0:0.5"/>
+                                        Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.ExitActions>
