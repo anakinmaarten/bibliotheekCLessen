@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibliotheek.WPF.Stores;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace bibliotheek.WPF.ViewModels
 
         public IEnumerable<ListingBooksItemsViewModel> ListingBooksItemsViewModel => _ListingBooksItemsViewModel;
 
-        public ListingBooksViewModel()
+        public ListingBooksViewModel(SelectedBookStore _SelectedBeheerderViewer)
         {
             _ListingBooksItemsViewModel = new ObservableCollection<ListingBooksItemsViewModel>();
 

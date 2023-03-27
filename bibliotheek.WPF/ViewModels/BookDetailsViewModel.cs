@@ -1,4 +1,6 @@
-﻿using System;
+﻿using bibliotheek.WPF.Models;
+using bibliotheek.WPF.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,21 +10,20 @@ namespace bibliotheek.WPF.ViewModels
 {
     public class BookDetailsViewModel : ViewModelBase
     {
-        public String Username { get; }
-        public String AuthorName { get; }
-        public String BookTitle { get; }
-        public String BookDesciption { get; }
-        public String BookType { get; }
-        public String BookTags { get; }
+        private readonly SelectedBookStore _selectedBeheerderViewer;
 
-        public BookDetailsViewModel()
+        private static BeheerderViewer SelectedBeheerderViewer => _selectedBeheerderViewer.SelectedBeheerderViewer;
+
+        public string? Username => SelectedBeheerderViewer?.Username;
+        public string? AuthorName => SelectedBeheerderViewer?.AuthorName;
+        public string? BookTitle => SelectedBeheerderViewer?.BookTitle;
+        public string? BookDesciption => SelectedBeheerderViewer?.BookDesciption;
+        public string? BookType => SelectedBeheerderViewer?.BookType;
+        public string? BookTags => SelectedBeheerderViewer?.BookTags;
+
+        public BookDetailsViewModel(SelectedBookStore SelectedBeheerderViewer)
         {
-            Username = "GDMaarten";
-            AuthorName = "Maarten";
-            BookTitle = "The nights";
-            BookDesciption = "Hello my name is the night of nights";
-            BookType = "funny";
-            BookTags = "Comady";
+            _selectedBeheerderViewer = SelectedBeheerderViewer;
         }
 
     }

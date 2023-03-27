@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibliotheek.WPF.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,17 @@ namespace bibliotheek.WPF.ViewModels
 {
     class BeheerderViewModel : ViewModelBase
     {
+        private SelectedBookStore selectedBeheerderViewer;
 
         public ListingBooksViewModel ListingBooksViewModel { get; }
         public BookDetailsViewModel BookDetailViewModel { get; }
         public ICommand AddBookCommand { get; }
 
-        public BeheerderViewModel(SelectedBeheerderViewer _SelectedBeheerderViewer)
+        public BeheerderViewModel(SelectedBookStore _SelectedBeheerderViewer)
         {
-            ListingBooksViewModel = new ListingBooksViewModel();
-            BookDetailViewModel = new BookDetailsViewModel();
+
+            ListingBooksViewModel = new ListingBooksViewModel(_SelectedBeheerderViewer);
+            BookDetailViewModel = new BookDetailsViewModel(_SelectedBeheerderViewer);
         }
     }
 }

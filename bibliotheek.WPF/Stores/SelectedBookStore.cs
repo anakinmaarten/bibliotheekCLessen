@@ -11,8 +11,8 @@ namespace bibliotheek.WPF.Stores
 {
     class SelectedBookStore
     {
-        private BeheerderViewer? _SelectedBeheerderViewer;
-        public BeheerderViewer SelectedBeheerderViewer
+        private BeheerderViewer _SelectedBeheerderViewer;
+        public BeheerderViewer BeheerderViewer
         {
             get
             {
