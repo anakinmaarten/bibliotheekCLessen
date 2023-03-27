@@ -9,6 +9,15 @@ namespace bibliotheek.WPF.ViewModels
 {
     class BeheerderViewModel : ViewModelBase
     {
+
+        public ListingBooksViewModel ListingBooksViewModel { get; }
+        public BookDetailsViewModel BookDetailViewModel { get; }
         public ICommand AddBookCommand { get; }
+
+        public BeheerderViewModel()
+        {
+            ListingBooksViewModel = new ListingBooksViewModel();
+            BookDetailViewModel = new BookDetailsViewModel();
+        }
     }
 }
