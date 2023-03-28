@@ -17,18 +17,19 @@ namespace bibliotheek.WPF
     public partial class App : Application
     {
 
-        private readonly SelectedBookStore _selectedBook;
+        private readonly SelectedBookStore _selectedBookStore;
+        private readonly BookViewer _selectedBook;
 
         public App()
         {
-            _selectedBook = new SelectedBookStore();
+            _selectedBookStore = new SelectedBookStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new BeheerderViewModel(_selectedBook)
+                DataContext = new BeheerderViewModel(_selectedBookStore, _selectedBook)
             };
             MainWindow.Show();
 
