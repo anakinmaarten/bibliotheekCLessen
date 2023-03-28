@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace bibliotheek.WPF.Models
 {
-    class BookViewer
+    public class BookViewer
     {
 
         public string Username { get; }
