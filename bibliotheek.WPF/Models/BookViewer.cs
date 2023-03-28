@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace bibliotheek.WPF.Models
 {
-    class BeheerderViewer
+    class BookViewer
     {
 
         public string Username { get; }
@@ -18,7 +18,7 @@ namespace bibliotheek.WPF.Models
         public string BookType { get; }
         public string BookTags { get; }
 
-        public BeheerderViewer(string username, string authorName, string bookTitle, string bookDesciption, string bookType, string bookTags)
+        public BookViewer(string username, string authorName, string bookTitle, string bookDesciption, string bookType, string bookTags)
         {
             Username = username;
             AuthorName = authorName;
@@ -28,7 +28,7 @@ namespace bibliotheek.WPF.Models
             BookTags = bookTags;
         }
 
-        public BeheerderViewer(string v)
+        public BookViewer(string v)
         {
         }
     }

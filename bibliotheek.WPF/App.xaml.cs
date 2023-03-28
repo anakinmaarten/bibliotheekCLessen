@@ -1,4 +1,5 @@
-﻿using bibliotheek.WPF.Stores;
+﻿using bibliotheek.WPF.Models;
+using bibliotheek.WPF.Stores;
 using bibliotheek.WPF.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ namespace bibliotheek.WPF
     public partial class App : Application
     {
 
-        private readonly SelectedBeheerderStore _SelectedBeheerderViewer;
+        private readonly SelectedBookStore _selectedbook;
 
         public App()
         {
-            _SelectedBeheerderViewer = new SelectedBeheerderStore();
+            _selectedbook = new SelectedBookStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)

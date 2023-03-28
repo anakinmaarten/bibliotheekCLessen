@@ -13,7 +13,7 @@ namespace bibliotheek.WPF.ViewModels
     public class ListingBooksViewModel : ViewModelBase
     {
         private readonly ObservableCollection<ListingBooksItemsViewModel> _ListingBooksItemsViewModel;
-        private readonly SelectedBeheerderStore selectedBeheerderStore;
+        private readonly SelectedBookStore SelectedBook;
 
         public IEnumerable<ListingBooksItemsViewModel> ListingBooksItemsViewModel => _ListingBooksItemsViewModel;
 
@@ -30,23 +30,23 @@ namespace bibliotheek.WPF.ViewModels
                 _SelectedBeheerderListingItemViewModel = value;
                 OnPropertyChanged(nameof(SelectedBeheerderListingItemViewModel));
 
-                _selectedBeheerderStore.SelectedBeheerderViewer = new BeheerderViewer();
+                _selectedBook.SelectedBookViewer = new BookViewer();
              }
              }
 
-        public ListingBooksViewModel(SelectedBeheerderStore selectedBeheerderStore)
+        public ListingBooksViewModel(SelectedBookStore selectedBook)
         {
 
-            _selectedBeheerderStore = selectedBeheerderStore;
+            _selectedBook = selectedBook;
 
             _ListingBooksItemsViewModel = new ObservableCollection<ListingBooksItemsViewModel>();
 
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 1")));
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 2")));
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 4")));
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 5")));
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 6")));
-            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BeheerderViewer("Hungergames 7")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 1")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 2")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 4")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 5")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 6")));
+            _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 7")));
             
         }
     }
