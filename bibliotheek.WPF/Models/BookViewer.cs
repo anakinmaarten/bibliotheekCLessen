@@ -31,5 +31,8 @@ namespace bibliotheek.WPF.Models
         public BookViewer(string v)
         {
         }
+        public BookViewer()
+        {
+        }
     }
 }
