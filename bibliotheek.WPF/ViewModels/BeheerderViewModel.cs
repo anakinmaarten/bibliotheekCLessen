@@ -17,10 +17,10 @@ namespace bibliotheek.WPF.ViewModels
         public BookDetailsViewModel BookDetailViewModel { get; }
         public ICommand AddBookCommand { get; }
 
-        public BeheerderViewModel(SelectedBookStore _selectedBook)
+        public BeheerderViewModel(SelectedBookStore _selectedBookStore, BookViewer _selectedBook)
         {
 
-            ListingBooksViewModel = new ListingBooksViewModel(_selectedBook);
+            ListingBooksViewModel = new ListingBooksViewModel(_selectedBookStore);
             BookDetailViewModel = new BookDetailsViewModel(_selectedBook);
         }
     }
