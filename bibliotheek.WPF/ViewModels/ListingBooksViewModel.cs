@@ -13,7 +13,7 @@ namespace bibliotheek.WPF.ViewModels
     public class ListingBooksViewModel : ViewModelBase
     {
         private readonly ObservableCollection<ListingBooksItemsViewModel> _ListingBooksItemsViewModel;
-        private readonly SelectedBookStore SelectedBook;
+        private readonly SelectedBookStore _selectedBook;
 
         public IEnumerable<ListingBooksItemsViewModel> ListingBooksItemsViewModel => _ListingBooksItemsViewModel;
 
@@ -30,7 +30,7 @@ namespace bibliotheek.WPF.ViewModels
                 _SelectedBeheerderListingItemViewModel = value;
                 OnPropertyChanged(nameof(SelectedBeheerderListingItemViewModel));
 
-                _selectedBook.SelectedBookViewer = new BookViewer();
+                _selectedBook.SelectedBook = new BookViewer();
              }
              }
 
