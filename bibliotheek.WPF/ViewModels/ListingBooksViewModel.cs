@@ -18,17 +18,17 @@ namespace bibliotheek.WPF.ViewModels
         public IEnumerable<ListingBooksItemsViewModel> ListingBooksItemsViewModel => _ListingBooksItemsViewModel;
 
 
-        private ListingBooksItemsViewModel _SelectedBeheerderListingItemViewModel;
-        public ListingBooksItemsViewModel SelectedBeheerderListingItemViewModel
+        private ListingBooksItemsViewModel _selectedBookListingItemViewModel;
+        public ListingBooksItemsViewModel SelectedBookListingItemViewModel
         {
             get
             {
-                return _SelectedBeheerderListingItemViewModel;
+                return _selectedBookListingItemViewModel;
             }
              set
              {
-                _SelectedBeheerderListingItemViewModel = value;
-                OnPropertyChanged(nameof(SelectedBeheerderListingItemViewModel));
+                _selectedBookListingItemViewModel = value;
+                OnPropertyChanged(nameof(SelectedBookListingItemViewModel));
 
                 _selectedBook.SelectedBook = new BookViewer();
              }
