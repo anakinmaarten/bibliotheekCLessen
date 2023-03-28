@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace bibliotheek.WPF.Stores
 {
-    internal class SelectedBookStore
+    public class SelectedBookStore
     {
       private BookViewer _selectedBook;
       public BookViewer SelectedBook
