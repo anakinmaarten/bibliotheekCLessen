@@ -10,7 +10,7 @@ namespace bibliotheek.WPF.ViewModels
 {
     public class BookDetailsViewModel : ViewModelBase
     {
-        private readonly SelectedBookStore _selectedBook;
+        private readonly BookViewer _selectedBook;
 
         private static BookViewer SelectedBook => _selectedBook.SelectedBook;
 
