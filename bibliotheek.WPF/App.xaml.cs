@@ -18,6 +18,7 @@ namespace bibliotheek.WPF
     {
 
         private readonly SelectedBookStore _selectedBook;
+        private SelectedBookStore _selectedBookStore;
 
         public App()
         {
@@ -28,7 +29,7 @@ namespace bibliotheek.WPF
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new BeheerderViewModel(_selectedBook)
+                DataContext = new BeheerderViewModel(_selectedBookStore, _selectedBook)
             };
             MainWindow.Show();
 

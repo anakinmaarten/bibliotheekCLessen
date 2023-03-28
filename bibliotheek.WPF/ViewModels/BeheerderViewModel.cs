@@ -12,6 +12,8 @@ namespace bibliotheek.WPF.ViewModels
     class BeheerderViewModel : ViewModelBase
     {
         private BookViewer _selectedBook;
+        private SelectedBookStore selectedBookStore;
+        private SelectedBookStore selectedBook;
 
         public ListingBooksViewModel ListingBooksViewModel { get; }
         public BookDetailsViewModel BookDetailViewModel { get; }
@@ -22,6 +24,12 @@ namespace bibliotheek.WPF.ViewModels
 
             ListingBooksViewModel = new ListingBooksViewModel(_selectedBookStore);
             BookDetailViewModel = new BookDetailsViewModel(_selectedBook);
+        }
+
+        public BeheerderViewModel(SelectedBookStore selectedBookStore, SelectedBookStore selectedBook)
+        {
+            this.selectedBookStore = selectedBookStore;
+            this.selectedBook = selectedBook;
         }
     }
 }
