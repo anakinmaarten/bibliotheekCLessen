@@ -23,7 +23,10 @@
                     Background="White"
                     CornerRadius="5"/>
 
-                <ListView BorderThickness="0" ItemsSource="{Binding ListingBooksItemsViewModel}">
+                <ListView
+                    BorderThickness="0"
+                    SelectedItem="{Binding SelectedBeheerderListingItemViewModel}"
+                    ItemsSource="{Binding ListingBooksItemsViewModel}">
                     <!--Start Tripple points alignments -->
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">

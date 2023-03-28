@@ -28,5 +28,8 @@ namespace bibliotheek.WPF.Models
             BookTags = bookTags;
         }
 
+        public BeheerderViewer(string v)
+        {
+        }
     }
 }

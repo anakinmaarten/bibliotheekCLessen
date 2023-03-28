@@ -10,21 +10,22 @@ namespace bibliotheek.WPF.ViewModels
 {
     public class BookDetailsViewModel : ViewModelBase
     {
-        private readonly SelectedBookStore _selectedBeheerderViewer;
+        private readonly SelectedBeheerderStore _selectedBeheerderStore;;
 
-        private static BeheerderViewer SelectedBeheerderViewer => _selectedBeheerderViewer.SelectedBeheerderViewer;
+        private static BeheerderViewer SelectedBeheerderStore => _selectedBeheerderStore.SelectedBeheerderStore;
 
-        public string? Username => SelectedBeheerderViewer?.Username;
-        public string? AuthorName => SelectedBeheerderViewer?.AuthorName;
-        public string? BookTitle => SelectedBeheerderViewer?.BookTitle;
-        public string? BookDesciption => SelectedBeheerderViewer?.BookDesciption;
-        public string? BookType => SelectedBeheerderViewer?.BookType;
-        public string? BookTags => SelectedBeheerderViewer?.BookTags;
 
-        public BookDetailsViewModel(SelectedBookStore SelectedBeheerderViewer)
+        public bool SelectedBeheerderStore => SelectedBeheerderStore != null;
+        public string? Username => SelectedBeheerderStore?.Username;
+        public string? AuthorName => SelectedBeheerderStore?.AuthorName;
+        public string? BookTitle => SelectedBeheerderStore?.BookTitle;
+        public string? BookDesciption => SelectedBeheerderStore?.BookDesciption;
+        public string? BookType => SelectedBeheerderStore?.BookType;
+        public string? BookTags => SelectedBeheerderStore?.BookTags;
+
+        public BookDetailsViewModel(SelectedBeheerderStore selectedBeheerderStore)
         {
-            _selectedBeheerderViewer = SelectedBeheerderViewer;
+            _selectedBeheerderStore = selectedBeheerderStore;
         }
-
     }
 }

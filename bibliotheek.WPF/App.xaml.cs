@@ -16,11 +16,11 @@ namespace bibliotheek.WPF
     public partial class App : Application
     {
 
-        private readonly SelectedBookStore _SelectedBeheerderViewer;
+        private readonly SelectedBeheerderStore _SelectedBeheerderViewer;
 
         public App()
         {
-            _SelectedBeheerderViewer = new SelectedBookStore();
+            _SelectedBeheerderViewer = new SelectedBeheerderStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
