@@ -12,7 +12,7 @@ namespace bibliotheek.WPF.ViewModels
     {
         private readonly BookViewer _selectedBook;
 
-        private static BookViewer SelectedBook => _selectedBook.SelectedBook;
+        private BookViewer SelectedBook => _selectedBook;
 
 
         public bool HasSelectedBook => SelectedBook != null;
@@ -24,7 +24,7 @@ namespace bibliotheek.WPF.ViewModels
         public string? BookType => _selectedBook?.BookType;
         public string? BookTags => _selectedBook?.BookTags;
 
-        public BookDetailsViewModel(SelectedBookStore selectedBook)
+        public BookDetailsViewModel(BookViewer selectedBook)
         {
             _selectedBook = selectedBook;
         }
