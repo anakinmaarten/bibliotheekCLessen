@@ -14,131 +14,145 @@
             BorderThickness="2"
             SnapsToDevicePixels="True">
 
-            <Grid Grid.IsSharedSizeScope="True" Margin="20 10 0 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                   
-                </Grid.RowDefinitions>
-
-                <TextBlock
-                    Grid.Row="0"
-                    Text="{Binding Username}"
-                    FontSize="16" />
-
-                <Grid Grid.Row="1" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-
+            <Grid>
+                <!-- IF there is no book selected you see this ... because you cant see details when you have nothing selected lol -->
+                <Grid>
                     <TextBlock
-                        Grid.Column="0"
-                        Text="Author:"
-                        FontWeight="Bold"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="{Binding AuthorName}"
-                        FontWeight="Bold"/>
+                        Grid.Row="0"
+                        Text="Please select a Book :)"
+                        FontSize="16" />
                 </Grid>
+                <!-- IF there is no book selected you see this -->
 
-                <Grid Grid.Row="2" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
+                <!-- YEs ... this is default -->
+                <Grid Grid.IsSharedSizeScope="True" Margin="20 10 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                <!-- also yes it ends here -->
 
+                    </Grid.RowDefinitions>
+                    
+                    <!-- else you see this DATABASE POWERRRRRRR -->
                     <TextBlock
-                        Grid.Column="0"
-                        Text="Title book:"
-                        FontWeight="Bold"/>
+                        Grid.Row="0"
+                        Text="{Binding Username}"
+                        FontSize="16" />
 
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="{Binding BookTitle}"
-                        FontWeight="Bold"/>
+                    <Grid Grid.Row="1" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="Author:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="{Binding AuthorName}"
+                            FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="Title book:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="{Binding BookTitle}"
+                            FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="3" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="Book Description:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="{Binding BookDesciption}"
+                            FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="4" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="Type of book:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="{Binding BookType}"
+                            FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="5" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="tags book:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="{Binding BookTags}"
+                            FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="6" Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="Book image:"
+                            FontWeight="Bold"/>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20 0 0 0"
+                            Text="Image here"
+                            FontWeight="Bold"/>
+                    </Grid>
+
                 </Grid>
-
-                <Grid Grid.Row="3" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock
-                        Grid.Column="0"
-                        Text="Book Description:"
-                        FontWeight="Bold"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="{Binding BookDesciption}"
-                        FontWeight="Bold"/>
-                </Grid>
-
-                <Grid Grid.Row="4" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock
-                        Grid.Column="0"
-                        Text="Type of book:"
-                        FontWeight="Bold"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="{Binding BookType}"
-                        FontWeight="Bold"/>
-                </Grid>
-
-                <Grid Grid.Row="5" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock
-                        Grid.Column="0"
-                        Text="tags book:"
-                        FontWeight="Bold"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="{Binding BookTags}"
-                        FontWeight="Bold"/>
-                </Grid>
-
-                <Grid Grid.Row="6" Margin="0 20 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock
-                        Grid.Column="0"
-                        Text="Book image:"
-                        FontWeight="Bold"/>
-
-                    <TextBlock
-                        Grid.Column="1"
-                        Margin="20 0 0 0"
-                        Text="Image here"
-                        FontWeight="Bold"/>
-                </Grid>
-
             </Grid>
         </Border>  
     </Grid>

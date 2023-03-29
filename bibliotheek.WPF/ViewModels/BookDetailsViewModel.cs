@@ -32,7 +32,7 @@ namespace bibliotheek.WPF.ViewModels
             _selectedBook.SelectedBookChanged += SelectedBook_SelectedBookChanged;
         }
         /// end Check "selected book" is selected/ add new book funtion
-        /// Start Delete funtion
+        /// Start Delete funtion viewmodel
 
         protected override void Dispose()
         {
@@ -40,8 +40,8 @@ namespace bibliotheek.WPF.ViewModels
             base.Dispose();
         }
 
-        /// end Delete funtion
-        /// Start change/add funtion
+        /// end Delete funtion viewmodel
+        /// Start change/add funtion aka ui update
         private void SelectedBook_SelectedBookChanged()
         {
             OnPropertyChanged(nameof(HasSelectedBook));
