@@ -17,6 +17,7 @@ namespace bibliotheek.WPF.Models
         public string BookDesciption { get; }
         public string BookType { get; }
         public string BookTags { get; }
+        public Action SelectedBookChanged { get; internal set; }
 
         public BookViewer(string username, string authorName, string bookTitle, string bookDesciption, string bookType, string bookTags)
         {
