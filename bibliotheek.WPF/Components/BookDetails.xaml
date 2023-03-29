@@ -32,7 +32,8 @@
                     <TextBlock
                         Grid.Row="0"
                         Text="Please select a Book :)"
-                        FontSize="16" />
+                        FontSize="16"
+                        TextWrapping="WrapWithOverflow"/>
                 </Grid>
                 <!-- IF there is no book selected you see this -->
 

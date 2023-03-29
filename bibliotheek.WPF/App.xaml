@@ -10,6 +10,11 @@
         <ResourceDictionary>
             <SolidColorBrush x:Key="BorderPrimary" Color="#2db512"/>
 
+            <Style TargetType="TextBlock" x:Key="PageHeader">
+                <Setter Property="FontSize" Value="25"/>
+            </Style>
+            
+
             <Style TargetType="Button">
                 <Setter Property="Foreground" Value="#2db512" />
                 <Setter Property="Background" Value="Black" />
