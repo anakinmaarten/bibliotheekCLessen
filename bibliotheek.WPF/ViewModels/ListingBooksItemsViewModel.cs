@@ -10,16 +10,16 @@ namespace bibliotheek.WPF.ViewModels
 {
     public class ListingBooksItemsViewModel : ViewModelBase
     {
-        private readonly BookViewer _selectedBook;
+        public BookViewer SelectedBook { get;  }
 
-        public string Username => _selectedBook.Username;
+        public string Username => SelectedBook.Username;
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
 
         public ListingBooksItemsViewModel(BookViewer bookViewer)
         {
-            _selectedBook = bookViewer;
+            SelectedBook = bookViewer;
         }
     }
 }

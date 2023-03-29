@@ -30,7 +30,7 @@ namespace bibliotheek.WPF.ViewModels
                 _selectedBookListingItemViewModel = value;
                 OnPropertyChanged(nameof(SelectedBookListingItemViewModel));
 
-                _selectedBook.SelectedBook = new BookViewer();
+                _selectedBook.SelectedBook = _selectedBook.SelectedBook.SelectedBook;
              }
              }
 

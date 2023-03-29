@@ -22,7 +22,7 @@ namespace bibliotheek.WPF
 
         public App()
         {
-            _selectedBook = new SelectedBookStore();
+            _selectedBookStore = new SelectedBookStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
