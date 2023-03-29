@@ -136,10 +136,16 @@
 
         </Grid>
 
-        <!-- Buttons to do what buttons do... have to come back and add the patch for the command(if i font forget) -->
+        <!-- Buttons to do what buttons do... have to come back and add the patch for the command(if i font forget) (also some fuetue proving als ik er aan toe kom om alles er in te krijgen) -->
         <WrapPanel Grid.Row="1" Margin="15 20 0 0">
-            <Button Content="Submit" Command="{Binding SubmitCommand}" Margin="0 0 15 0"/>
-            <Button Content="Cancel" Command="{Binding CancelCommand}"/>
+            <Button
+                Content="Submit"
+                IsEnabled="{Binding CanSubmit}"
+                Command="{Binding SubmitCommand}"
+                Margin="0 0 15 0"/>
+            <Button
+                Content="Cancel"
+                Command="{Binding CancelCommand}"/>
         </WrapPanel>
         
     </Grid>

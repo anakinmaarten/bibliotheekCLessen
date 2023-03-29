@@ -14,7 +14,7 @@
                 <Setter Property="FontSize" Value="25"/>
             </Style>
             
-
+            <!-- All button styles -->
             <Style TargetType="Button">
                 <Setter Property="Foreground" Value="#2db512" />
                 <Setter Property="Background" Value="Black" />
@@ -25,7 +25,7 @@
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="TextBlock.TextAlignment" Value="Center"/>
 
-
+                <!-- Binging options from app.xaml for buttons -->
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
@@ -40,7 +40,9 @@
                     </Setter.Value>
                 </Setter>
 
+                <!-- button triggers fist one is hover stuff second one is fuetue proving (IsEnabled false dont show button.... guest should not be allowd to edit things) -->
                 <Style.Triggers>
+                    <!-- this is the notmal things like color changes when hovering over it and changing courser -->
                     <Trigger Property="IsMouseOver" Value="True">
                         <Trigger.EnterActions>
                             <BeginStoryboard>
@@ -64,6 +66,13 @@
                             </BeginStoryboard>
                         </Trigger.ExitActions>
                     </Trigger>
+
+                    
+                    <!-- this is the Desabeld function -->
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Opacity" Value="0.2"/>
+                    </Trigger>
+                    
                 </Style.Triggers>
                     
             </Style>
