@@ -29,7 +29,7 @@
             <Grid Grid.Row="1" Margin="0 20 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" MaxWidth="200" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
@@ -37,7 +37,7 @@
                             Text="Author:"
                             FontWeight="Bold"/>
 
-                <TextBlock
+                <TextBox
                             Grid.Column="1"
                             Margin="20 0 0 0"
                             Text="{Binding AuthorName}"
@@ -47,7 +47,7 @@
             <Grid Grid.Row="2" Margin="0 20 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" MaxWidth="200" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
@@ -55,7 +55,7 @@
                             Text="Title book:"
                             FontWeight="Bold"/>
 
-                <TextBlock
+                <TextBox
                             Grid.Column="1"
                             Margin="20 0 0 0"
                             Text="{Binding BookTitle}"
@@ -65,7 +65,7 @@
             <Grid Grid.Row="3" Margin="0 20 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" MaxWidth="200" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
@@ -73,7 +73,7 @@
                             Text="Book Description:"
                             FontWeight="Bold"/>
 
-                <TextBlock
+                <TextBox
                             Grid.Column="1"
                             Margin="20 0 0 0"
                             Text="{Binding BookDesciption}"
@@ -83,7 +83,7 @@
             <Grid Grid.Row="4" Margin="0 20 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" MaxWidth="200" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
@@ -91,7 +91,7 @@
                             Text="Type of book:"
                             FontWeight="Bold"/>
 
-                <TextBlock
+                <TextBox
                             Grid.Column="1"
                             Margin="20 0 0 0"
                             Text="{Binding BookType}"
@@ -101,7 +101,7 @@
             <Grid Grid.Row="5" Margin="0 20 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" MaxWidth="200" />
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
@@ -109,7 +109,7 @@
                             Text="tags book:"
                             FontWeight="Bold"/>
 
-                <TextBlock
+                <TextBox
                             Grid.Column="1"
                             Margin="20 0 0 0"
                             Text="{Binding BookTags}"
