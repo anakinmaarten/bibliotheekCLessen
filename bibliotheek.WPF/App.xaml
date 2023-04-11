@@ -14,7 +14,7 @@
                 <Setter Property="Foreground" Value="#2db512" />
                 <Setter Property="Background" Value="Black" />
                 <Setter Property="Padding" Value="15 5"/>
-                <Setter Property="Margin" Value="2"/>
+                <Setter Property="Margin" Value="2 2 0 0"/>
                 <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
