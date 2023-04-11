@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bibliotheek.WPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,16 @@ namespace bibliotheek.WPF.ViewModels
 {
     public class ListingBooksItemsViewModel : ViewModelBase
     {
-        public string Username { get; }
+        public BookViewer SelectedBook { get;  }
+
+        public string Username => SelectedBook.Username;
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public ListingBooksItemsViewModel(string username)
-        {
-            Username = username;
 
+        public ListingBooksItemsViewModel(BookViewer bookViewer)
+        {
+            SelectedBook = bookViewer;
         }
     }
 }

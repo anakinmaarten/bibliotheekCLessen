@@ -19,9 +19,10 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
 
-            <TextBlock
+            <!-- page header time ... Look in App.xmal for my syles hehe -->
+            <TextBlock  
+                Style="{StaticResource PageHeader}"
                 Grid.Column="0"
-                FontSize="20"
                 VerticalAlignment="Center"
                 Margin="30 0 0 0"
                 Text="Bibliotheek boeken:" />
