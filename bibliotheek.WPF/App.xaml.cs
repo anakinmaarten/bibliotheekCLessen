@@ -30,6 +30,7 @@ namespace bibliotheek.WPF
             MainWindow = new MainWindow()
             {
                 DataContext = new BeheerderViewModel(_selectedBookStore, _selectedBook)
+
             };
             MainWindow.Show();
 

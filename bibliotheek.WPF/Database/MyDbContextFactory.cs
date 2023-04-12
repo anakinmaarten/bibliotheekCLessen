@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GARBAGE.Database
+namespace bibliotheek.WPF.Database
 {
     public class MyDbContextFactory : IDesignTimeDbContextFactory<MyDbContext>
     {
