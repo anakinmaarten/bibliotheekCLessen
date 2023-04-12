@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GARBAGE.ViewModels;
-using NameSpace.Models;
+using GARBAGE.Models;
 using Bogus;
 
 namespace GARBAGE.Database

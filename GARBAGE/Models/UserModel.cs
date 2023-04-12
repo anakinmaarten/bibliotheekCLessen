@@ -4,9 +4,14 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Configuration;
-using NameSpace.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
+using GARBAGE.Models;
+using static System.Net.Mime.MediaTypeNames;
+using GARBAGE.Database;
+using GARBAGE.Context;
 
-namespace NameSpace.Models // ‘NameSpace’ is jouw namespace. ‘.Models’ verwijst naar een folder in jouw project
+namespace GARBAGE.Models // ‘NameSpace’ is jouw namespace. ‘.Models’ verwijst naar een folder in jouw project
 {
     [Table("Users")] // Geeft aan in welke tabel jij de data wil hebben
     public partial class UserModel // Deze class moet partial zijn i.v.m. bovenstaande Table attribute
@@ -49,5 +54,18 @@ namespace NameSpace.Models // ‘NameSpace’ is jouw namespace. ‘.Models’ v
         // standard date and time the user was made
         public DateTime? CreatedAt { get; set; } = default(DateTime?);
         public DateTime? UpdatedAt { get;} = default(DateTime?);
+
+        
+        public void AddUser(UserModel user) 
+        {
+            
+            using (var context = new LibraryContext())
+            {
+                context.Usermodel.Add(user);
+
+                context.SaveChanges();
+            }
+        }
+
     }
 }

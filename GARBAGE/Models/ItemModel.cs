@@ -2,8 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.ObjectModel;
+using GARBAGE.Context;
 
-namespace NameSpace.Models
+namespace GARBAGE.Models
 {
     [Table("item")]
     public partial class ItemModel
@@ -38,6 +39,14 @@ namespace NameSpace.Models
         public DateTime? CreatedAt { get; set; } = default(DateTime?);
         public DateTime? UpdatedAt { get; } = default(DateTime?);
 
+        public void AddItem(ItemModel item)
+        {
+            using (var context = new LibraryContext())
+            {
+                context.Itemmodel.Add(item);
 
+                context.SaveChanges();
+            }
+        }
     }
 }

@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using GARBAGE.Context;
 
-namespace NameSpace.Models
+namespace GARBAGE.Models
 {
     [Table("author")]
     public partial class AuthorModel
@@ -32,5 +33,15 @@ namespace NameSpace.Models
         // standard date and time the image was uploaded or changed
         public DateTime? CreatedAt { get; set; } = default(DateTime?);
         public DateTime? UpdatedAt { get; } = default(DateTime?);
+
+        public void AddAuthor(AuthorModel author)
+        {
+            using (var context = new LibraryContext())
+            {
+                context.Authormodel.Add(author);
+
+                context.SaveChanges();
+            }
+        }
     }
 }
