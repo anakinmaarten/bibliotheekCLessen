@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using bibliotheek.WPF.ViewModels;
+using GARBAGE.ViewModels;
 using NameSpace.Models;
 using Bogus;
 
-namespace bibliotheek.WPF.Database
+namespace GARBAGE.Database
 {
     public class MyDbContext : DbContext
     {

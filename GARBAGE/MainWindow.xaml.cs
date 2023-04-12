@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace bibliotheek.WPF.Components
+namespace GARBAGE
 {
     /// <summary>
-    /// Interaction logic for BookDetails.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class BookDetails : UserControl
+    public partial class MainWindow : Window
     {
-        public BookDetails()
+        public MainWindow()
         {
             InitializeComponent();
         }
