@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GARBAGE.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GARBAGE.Context;
+using GARBAGE.Models;
 
 namespace GARBAGE
 {
@@ -23,6 +26,13 @@ namespace GARBAGE
         public MainWindow()
         {
             InitializeComponent();
+            UserModel user = new UserModel();
+            user.Role = 1;
+            user.FirstName = "henk";
+            user.LastName = "de Potvis";
+            user.Phonenumber = 0641258339;
+
+            user.AddUser(user);
         }
     }
 }

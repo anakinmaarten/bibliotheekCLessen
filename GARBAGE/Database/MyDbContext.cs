@@ -19,6 +19,9 @@ namespace GARBAGE.Database
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
         }
+        public MyDbContext()
+        {
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -58,10 +58,10 @@ namespace GARBAGE.Models // ‘NameSpace’ is jouw namespace. ‘.Models’ ver
         
         public void AddUser(UserModel user) 
         {
-            
-            using (var context = new LibraryContext())
+
+            using (var context = new MyDbContext())
             {
-                context.Usermodel.Add(user);
+                context.Users.Add(user);
 
                 context.SaveChanges();
             }
