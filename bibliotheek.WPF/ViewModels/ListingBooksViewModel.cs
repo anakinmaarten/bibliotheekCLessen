@@ -30,7 +30,7 @@ namespace bibliotheek.WPF.ViewModels
                 _selectedBookListingItemViewModel = value;
                 OnPropertyChanged(nameof(SelectedBookListingItemViewModel));
 
-                _selectedBook.SelectedBook = _selectedBook?.SelectedBook;
+                _selectedBook.SelectedBook = _selectedBook.SelectedBook;
              }
              }
 
@@ -39,7 +39,8 @@ namespace bibliotheek.WPF.ViewModels
 
             _selectedBook = selectedBook;
 
-            _ListingBooksItemsViewModel = new ObservableCollection<ListingBooksItemsViewModel>();
+            ObservableCollection<ListingBooksItemsViewModel> listingBooksItemsViewModels = new ObservableCollection<ListingBooksItemsViewModel>();
+            _ListingBooksItemsViewModel = listingBooksItemsViewModels;
 
             _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 1")));
             _ListingBooksItemsViewModel.Add(new ListingBooksItemsViewModel(new BookViewer("Hungergames 2")));

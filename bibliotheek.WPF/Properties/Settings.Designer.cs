@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GARBAGE.Properties {
+namespace bibliotheek.WPF.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
-    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -26,9 +26,9 @@ namespace GARBAGE.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=MYDB;\nIntegrated Security=Tru" +
-            "e; Connect Timeout=30; Encrypt=False;\nTrustServerCertificate=False; ApplicationI" +
-            "ntent=ReadWrite;\nMultiSubnetFailover=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=MYDB;\r\nIntegrated Security=Tr" +
+            "ue; Connect Timeout=30; Encrypt=False;\r\nTrustServerCertificate=False; Applicatio" +
+            "nIntent=ReadWrite;\r\nMultiSubnetFailover=False")]
         public string ConnectionStrings {
             get {
                 return ((string)(this["ConnectionStrings"]));

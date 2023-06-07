@@ -1,4 +1,4 @@
-﻿using GARBAGE.Properties;
+﻿using bibliotheek.WPF.Properties;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
