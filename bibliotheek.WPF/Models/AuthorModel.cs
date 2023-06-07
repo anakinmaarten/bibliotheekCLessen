@@ -27,7 +27,7 @@ namespace NameSpace.Models
         public virtual ImgModel? Img_id { get; set; }
 
         // the items the author has made
-        public virtual ObservableCollection<ItemModel> Items { get; set; }
+        public virtual ObservableCollection<ItemModel>? Items { get; set; }
 
         // standard date and time the image was uploaded or changed
         public DateTime? CreatedAt { get; set; } = default(DateTime?);
